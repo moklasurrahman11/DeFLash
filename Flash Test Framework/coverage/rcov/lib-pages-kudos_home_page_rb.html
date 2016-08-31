@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>lib/pages/kudos_home_page.rb</title>
+    <link href="./assets/0.2.3/screen.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="./assets/0.2.3/print.css" media="print" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <script type="text/javascript" src="./assets/0.2.3/rcov.js"></script>
+  </head>
+  <body>
+    <h1>Flash test framework C0 Coverage Information - Simploco - RCov</h1>
+    <h2>lib/pages/kudos_home_page.rb</h2>
+
+    <div class="report_table_wrapper">
+      <table class='report' id='report_table'>
+        <thead>
+          <tr>
+            <th class="left_align">Name</th>
+            <th class="right_align">Total Lines</th>
+            <th class="right_align">Lines of Code</th>
+            <th class="left_align">Total Coverage</th>
+            <th class="left_align">Code Coverage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="left_align"><a href="lib-pages-kudos_home_page_rb.html">lib/pages/kudos_home_page.rb</a></td>
+            <td class='right_align'><tt>85</tt></td>
+            <td class='right_align'><tt>43</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>83.53%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:84px"></div>
+        <div class="uncovered" style="width:16px"></div>
+      </div></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>67.44%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:67px"></div>
+        <div class="uncovered" style="width:33px"></div>
+      </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Key</h3>
+
+    <div class="key"><pre><span class='marked'>Code reported as executed by Ruby looks like this...</span><span class='marked1'>and this: this line is also marked as covered.</span><span class='inferred'>Lines considered as run by rcov, but not reported by Ruby, look like this,</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).</span><span class='uncovered'>Finally, here's a line marked as not executed.</span></pre></div>
+
+    <h3>Coverage Details</h3>
+
+    <table class="details">
+      <tbody>
+        <tr class="marked">
+          <td><pre><a name="line2">2</a> class KudosHomePage&lt;GenericBasePage</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line3">3</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line4">4</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line5">5</a>   element(:profile_img_icon) {|b| b.image(xpath:&#39;//*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[2]/a/img&#39;)}          #Profile img</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line6">6</a>   element(:administration_link) {|b| b.link(text:&#39;Administration&#39;)}                                            #Administrator link</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line7">7</a>   def click_account_icon</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line8">8</a>     profile_img_icon.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line9">9</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line10">10</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line11">11</a>   def click_on_admin_link</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line12">12</a>     if (administration_link.exist?)</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line13">13</a>       puts &quot;--------Congrates You have Admin Rights-----------&quot;</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line14">14</a>     administration_link.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line15">15</a>     else</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line16">16</a>       puts &quot;----Sorry User Don&#39;t Have admin Access&quot;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line17">17</a>       end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line18">18</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line19">19</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line20">20</a> #-------Log Out-------------------------------------------------------------------------------</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line21">21</a>   element(:sign_out_link) {|b| b.link(text:&#39;Sign Out&#39;)}                                                        #Sign out link</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line22">22</a> def log_out</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line23">23</a>   sign_out_link.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line24">24</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line25">25</a>   #------------------------------------------------------------------------------------------</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line26">26</a>   element(:action) {|b| b.link(text:&#39;Action&#39;)}                                                                 #Action link</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line27">27</a>   element(:another_action) {|b| b.link(text:&#39;Another action&#39;)}                                                 #Another Action link</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line28">28</a>   element(:kudo_bell) {|b| b.link(xpath:&#39;//*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[1]/a/img&#39;)}             #kudo bell link</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line29">29</a>   element(:current_user) {|b| b.span(xpath:&#39;//*[@id=&quot;userAccount&quot;]/div/div/div[2]/h4/span&#39;)}                   #Current Users name</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line30">30</a>   #element(:current_user) {|b| b.span(xpath:&#39;//*[@id=&quot;userAccount&quot;]/div/div/div[2]/h4/span&#39;)}                   #Current Users name</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line31">31</a>   element(:available_points) {|b| b.h1(xpath:&#39;//*[@id=&quot;userAccount&quot;]/div/div/div[4]/ul/li[1]/h1&#39;)}                     #Available Points</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line32">32</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line33">33</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line34">34</a>   element(:username) {|b| b.h1(text:&#39;//*[@id=&quot;userAccount&quot;]/div/div/div[4]/ul/li[2]/h1&#39;)}                      #My Points</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line35">35</a>   element(:number_of_kudo) {|b| b.div(class:&#39;number&#39;)}                                                         #number of kudos</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line36">36</a>   element(:recent_activity_tab) {|b| b.link(text:&#39;Recent Activity&#39;)}                                           #recent activity tab</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line37">37</a>   element(:leader_boards_tab) {|b| b.link(text:&#39;Leaderboards&#39;)}                                                #Leader boards tab</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line38">38</a>   element(:profile_tab) {|b| b.link(xpath:&#39;//*[@id=&quot;app-content&quot;]/div[2]/div/div/div/ul/li[3]/a&#39;)}                                                           #profile tab</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line39">39</a>   element(:friends_tab) {|b| b.link(xpath:&#39;//*[@id=&quot;app-content&quot;]/div[2]/div/div/div/ul/li[4]/a&#39;)}                                                           #Friends Tab</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line40">40</a>   element(:settings_tab ) {|b| b.link(xpath:&#39;//*[@id=&quot;app-content&quot;]/div[2]/div/div/div/ul/li[5]/a&#39;)}                                                       #settings_tab</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line41">41</a>   # element(:username) {|b| b.link(text:&#39;Sign Out&#39;)}                                                        #Sign out link</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line42">42</a>   # element(:username) {|b| b.link(text:&#39;Sign Out&#39;)}                                                        #Sign out link</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line43">43</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line44">44</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line45">45</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line46">46</a> def who_am_i</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line47">47</a> </pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line48">48</a>   sleep 4</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line49">49</a>   puts &quot;Current User is: #{current_user.text}&quot;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line50">50</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line51">51</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line52">52</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line53">53</a> def click_on_recent_activity</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line54">54</a>   recent_activity_tab.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line55">55</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line56">56</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line57">57</a> def my_number_of_kudos</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line58">58</a>  puts &quot;My Current Number of Kudos: #{number_of_kudo.text}&quot;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line59">59</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line60">60</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line61">61</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line62">62</a>   def my_availalbe_points</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line63">63</a>     puts &quot;Current Available points: #{available_points.text}&quot;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line64">64</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line65">65</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line66">66</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line67">67</a> def click_on_leadersboard</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line68">68</a>   leader_boards_tab.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line69">69</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line70">70</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line71">71</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line72">72</a> def click_on_profile_tab</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line73">73</a>   profile_tab.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line74">74</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line75">75</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line76">76</a>   def click_on_friends_tab</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line77">77</a>     sleep 3</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line78">78</a>     friends_tab.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line79">79</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line80">80</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line81">81</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line82">82</a>   def click_on_setting_tab</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line83">83</a>     settings_tab.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line84">84</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line85">85</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line86">86</a> end</pre></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Generated on 2016-08-31 15:07:01 -0400 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+
+  </body>
+</html>
